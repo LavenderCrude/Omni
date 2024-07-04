@@ -1,0 +1,207 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: rgb(0, 0, 0);
+    border-radius: 30%/40%
+}
+
+.active {
+    background-color: white;
+    border-radius: 30%/40%;
+    color: rgb(255, 0, 0) !important;
+}
+
+.expand-more {
+    display: none;
+}
+
+#home {
+    padding-left: -12px;
+}
+.story-container{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+.story-container img{
+margin-top: 80px;
+height: 60px;
+width: 60px;
+border-radius: 50%;
+border:4px solid rgb(240, 160, 10);
+}
+.profile-details {
+    margin: 20px 0 0 0;
+    padding: 20px 20px;
+    background-color: rgb(245, 218, 218);
+    color: #000000;
+    font-weight: 600;
+    font-size: 20px;
+    border-radius: 50px 50px 0 0;
+    display: flex;
+
+}
+
+.username {
+    margin: 10px;
+}
+
+.profile-details img {
+    height: 50px;
+    width: 50px;
+    border: 2px solid palegreen;
+    border-radius: 50%;
+}
+
+.features {
+    display: flex;
+    gap: 40px;
+    padding: 10px;
+}
+
+img {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.title {
+    display: flex;
+    gap: 15px;
+
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.title img {
+    margin: 0px 0px 0 20px;
+    height: 50px;
+    width: 50px;
+}
+
+.lovers-quarrel-regular {
+    font-family: "Lovers Quarrel", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    letter-spacing: 5px;
+    top: 0;
+    gap: 10px;
+}
+
+#message {
+    height: 40px;
+    width: 40px;
+    margin: 2%;
+    position: absolute;
+    top: 5;
+    right: 0;
+}
+
+.img-section {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.img-setting {
+    margin: 5%;
+    margin-top: 100px;
+    margin-bottom: -50px;
+}
+
+.img-content {
+    text-align: justify;
+    padding: 10px 20px 20px;
+    background-color: rgb(245, 218, 218);
+    border-radius: 0 0 50px 50px;
+}
+
+.quicksand {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        bottom: auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        border-radius: 0px 0px 50px 50px;
+    }
+
+    .container {
+        margin: 100px 0px;
+    }
+
+    img {
+
+        width: 400px;
+        height: 400px;
+    }
+
+    .img-setting {
+        width: 400px;
+        height: 400px;
+        text-align: justify;
+        margin: 2%;
+    }
+
+    .img-section {
+        height: 530px;
+        gap: 230px 0px;
+    }
+
+    .expand-less {
+        display: none;
+    }
+
+    .expand-more {
+        display: block;
+    }
+
+    .title {
+        display: none;
+    }
+    .story-container{
+       margin-top: 40px;
+       margin-bottom: -100px;
+    }
+}

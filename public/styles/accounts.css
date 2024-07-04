@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: rgb(0, 0, 0);
+    border-radius: 30%/40%
+}
+
+.active {
+    background-color: white;
+    border-radius: 30%/40%;
+    color: rgb(255, 0, 0) !important;
+}
+
+.expand-more {
+    display: none;
+}
+
+#home {
+    padding-left: -12px;
+}
+
+.accounts {
+    font-size: 30px;
+    letter-spacing: 6px;
+    margin: 20px 40px;
+    padding: 10px;
+    text-align: left;
+
+    background-color: rgb(255, 255, 255);
+}
+
+.accounts a {
+    color: black;
+    text-decoration: none;
+}
+
+.accounts a:hover {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.quicksand {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.accounts a img {
+    height: 30px;
+}
+
+#instagram {
+    height: 25px;
+}
+#section1{
+    border:2px solid black;
+}
+@media screen and (min-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        bottom: auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        border-radius: 0px 0px 50px 50px;
+    }
+
+    .expand-less {
+        display: none;
+    }
+
+    .expand-more {
+        display: block;
+    }
+
+    #section1 {
+        margin: 120px 0px;
+    }
+}

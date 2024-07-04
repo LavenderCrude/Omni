@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Notification</title>
+    <style>
+        .notification-id {
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 22px;
+            color: rgb(110, 104, 104);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40vh;
+            margin: 10%;
+        }
+
+        #back-button {
+            margin: 30px 12px;
+
+        }
+
+        #back-button a {
+            color: black;
+        }
+
+        #back-button a:hover {
+            color: rgb(255, 111, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-section-search">
+        <div id="back-button">
+            <a href="#" onclick="goBack()">
+                <span class="material-symbols-outlined">arrow_back_ios</span>
+            </a>
+        </div>
+    </nav>
+    <div class="notification-id">
+        No notification available at the moment.
+        <br> <br>
+        Please check back later for new notifications!
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+    </script>
+</body>
+
+</html>

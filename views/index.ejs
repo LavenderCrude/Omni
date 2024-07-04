@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&family=Lovers+Quarrel&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap">
+    <link rel="stylesheet" href="/styles/index.css">
+    <title>Omni</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="/" id="home" class="active"><span class="home material-symbols-outlined">
+                home_app_logo
+            </span></a>
+        <a id="search" href="/search"><span class="search material-symbols-outlined">
+                search
+            </span></a>
+        <a id="notification" href="/notification"><span class="notification material-symbols-outlined">
+                notifications
+            </span></a>
+        <a id="expand-less" href="/accounts">
+            <span class="expand-less material-symbols-outlined">
+                expand_less
+            </span>
+            <span class="expand-more material-symbols-outlined">
+                expand_more
+            </span>
+        </a>
+        <a id="person" href="/settings" class="person material-symbols-outlined">
+            person
+            </span></a>
+    </nav>
+    <div class="title lovers-quarrel-regular">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAb1BMVEX///9kQKXPyOFOG5tUJZ20p9DFu9thPKRrSqjMxN/c1+ltTal2Wq5dNaJgOaOcisPl4e+Jcri4rNNJDplZL6Dt6vP29fmhkMWwoM/z8Pirms1XKp9AAJWahcLUzeSWgMGBZrR0Va4pAI2Ea7V/YbP6lGQyAAAEEklEQVR4nO3dcVeyMBTHcSllKoGiOBUzs3r/r/GxU1PibuCzXdrW+X3/RvBzhlw9JY5GCCGEEEIIIYQQcmz2EEgv0tny8vwYRut87ow55UkYicwZsyl8I1QMmF0oC8OAka9/aGVmU9+Ga+6YYzAL446Zn4VvwzVnzMS3oJErZlmGc5Y5Y9JpOGeZK0YuKt+CRo6Yl6f2WVaNfzfBhpGr9kk2XUx+tVXzNHfDLMvWWxmRPTjszqbmqeGGeWi/YsR0xvY074sNI+vD38HMz+2Xf8SYVXthIsbsycJEjHkhCxMx5kinf7SYjaBvy6LF7OhZFi1GZpr3y7FiNC//eDHpGBjugCEBwx8wJGD4A4YEDH/AkIBRyeWtjWmj/T0bBYCZv61Vz09Lw0aTxkYfpj0FgFmurw8pShNmdTtCXpr2FBYmB+YaMCRgVMBoA4YEjAoYbcCQgFEBow0YEjAqYLQBQwJGBYw2YEjAqIDRBgwJGBUw2oAhAaMCRhswJGBUy+dcdXg3YtaNjUx7CgHzUaret6a/8aevt41q054CwIw2jUx3JJCNbfamHYWAYQsYEjD8AUMChr+/hJFnlq8DB4HZ1z+OHjXmYuH51nkAmP3uhyVqjPy5LlFjiOVy9GgxNbmt0nhhe0sw35jtY/vgB+OHnt48Y7btw4vqaL83rxhZt9dF5Pbr4hcj6/aX94ukdrmFnkfMvm5/R1yIndPtAP1h9uSaXCRuFn8YahGuFm8YzazMnV4vn3nCSDorC5fr2FeeMDW518V44b5XP5jFmlh2DLv1gZF07hcM6+IFI2tiyTnWxQfmMitbh7vMfZ5d/zpmiPmiMmAGu7/ZAHP/lhaTJOWiq2OqO3za+ZjvyvatFPnWxYgRRVfaz4Jplnc+6Lv2gSrnud+L6a7a0ieQTq1uxVnxXMd4MZaWA8t8YcaklZWFZe5zY9LExiLEltXCg5lZrcvlcyWvhQWTChsL43xhxNi99jnnCx/GzlIU/BZ3zEp3t7feRDLhtzhj0sxuVjJfx1gwdtfk5MB9HePAWFqGWRdHjOV8qZg+i7FiLOeLGMrigklzy/kylMUBY7suA8wXZ4zlrBxkvrhhamn5HmaIue+K2U6sfnvD9e8vg2CSzO4XHvKB5ssV83bXj0Ld+2zHnb8sNdg1+f+67zeQqnLQs4iru35ro3iNwnIXpjoa/205rPoxQpyM95ULrF6MyI+xWPoxxdH0xYbw6sMUp3gsfZi8jOYcG/VhqjKS69hXnZjKeEfJMOvCVMYvXwVaB6aI4z1MIyPmMl+ier18ZsIIEc+svGbAXCwRzReVAZPHaDFgigjPsZEBU73Hdh37SoeJ5HMl7VCIdnlkc/9Wdm6XnXw/J+s2tEjPMYQQQgghhBDy1D8R8I3ICI1mBgAAAABJRU5ErkJggg=="
+            alt=""> LinkLeap <a href="./notification.html"> <img id="message"
+                src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/facebook-messenger-icon.png"
+                alt=""> </a>
+    </div>
+    <div class="story-container">
+        <img src="https://i.pinimg.com/236x/ef/3f/35/ef3f35fd214dd58495b6e357f98fcd79.jpg" alt="">
+        <img src="https://i.pinimg.com/236x/5b/6c/52/5b6c52e076a7bdc1649391e5d93c4053.jpg" alt="">
+        <img src="https://i.pinimg.com/236x/c9/c9/79/c9c979d406bab09b80e0a7d27b9c7c9d.jpg" alt="">
+        <img src="https://i.pinimg.com/236x/ed/f5/f3/edf5f38bd6c7f4a27414f80f66a75644.jpg" alt="">
+
+    </div>
+    <div class="container">
+        <div class="section-1">
+            <div class="img-section quicksand">
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://images.pexels.com/photos/1540406/pexels-photo-1540406.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://i.pinimg.com/564x/26/32/ed/2632ed2a144001c9bfd96330fcfdab0e.jpg" alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://images.pexels.com/photos/4805704/pexels-photo-4805704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://i.pinimg.com/236x/36/be/37/36be37d1a39e180b844dd06afa99b255.jpg" alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://i.pinimg.com/564x/26/32/ed/2632ed2a144001c9bfd96330fcfdab0e.jpg" alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://images.pexels.com/photos/4805704/pexels-photo-4805704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://i.pinimg.com/236x/36/be/37/36be37d1a39e180b844dd06afa99b255.jpg" alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://i.pinimg.com/564x/26/32/ed/2632ed2a144001c9bfd96330fcfdab0e.jpg" alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://images.pexels.com/photos/4805704/pexels-photo-4805704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://i.pinimg.com/236x/36/be/37/36be37d1a39e180b844dd06afa99b255.jpg" alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://i.pinimg.com/564x/26/32/ed/2632ed2a144001c9bfd96330fcfdab0e.jpg" alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://images.pexels.com/photos/4805704/pexels-photo-4805704.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                            alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+                <div class="img-setting">
+                    <div class="profile-details">
+                        <img src="https://images.pexels.com/photos/20640155/pexels-photo-20640155/free-photo-of-portrait-of-woman-in-shadow.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+                            alt="">
+                        <div class="username">alexadom</div>
+                    </div>
+                    <div class="img-box">
+                        <img src="https://i.pinimg.com/236x/36/be/37/36be37d1a39e180b844dd06afa99b255.jpg" alt="">
+                    </div>
+                    <div class="img-content">
+                        <div class="features">
+                            <div class="like"><span class="material-symbols-outlined">
+                                    favorite
+                                </span></div>
+                            <div class="comment"><span class="material-symbols-outlined">
+                                    forum
+                                </span></div>
+                            <div class="share"><span class="material-symbols-outlined">
+                                    share
+                                </span></div>
+                        </div>
+                        <div class="post-detail">
+                            Post details: Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum alias,
+                            unde animi, ex reiciendis dicta mollitia necessitatibus quas odit consequatur. Lorem, ipsum
+                            dolor sit amet consectetur adipisicing elit. Ipsam dolore, similique reiciendis autem,
+                            tempore quo corporis omnis culpa maiores eius fugiat! Non nisi laudantium nulla sequi porro
+                            corrupti, quae repellat omnis fugiat nostrum quas!
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/javascripts/index.js"></script>
+
+</body>
+
+</html>
